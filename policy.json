@@ -25,6 +25,18 @@
         "s3:ListBucket"
       ],
       "Resource": "arn:aws:s3:::BUCKETNAME"
+    },
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "*"
+      },
+      "Action": [
+        "s3:GetObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::BUCKETNAME/*"
+      ]
     }
   ]
 }
