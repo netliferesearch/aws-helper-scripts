@@ -10,7 +10,7 @@ Helper scripts to quickly build buckets with tidy access rights
     1. Create a user called bucket-name for simplicity.
     1. Give user right to list buckets (not view their contents).
     1. Create bucket called bucket-name.
-    1. Add bucket access policy so that user can work within the bucket. *Important:* All resources within bucket will be downloadable by anyone with a link by default.
+    1. Add bucket access policy so that user can work within the bucket. **Important:** All resources within bucket will be downloadable by anyone with a link by default.
     1. Create access tokens for the user.
 
 Licensed under GNU GPLv3, see `LICENSE.txt`.
