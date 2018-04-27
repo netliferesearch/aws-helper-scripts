@@ -2,8 +2,8 @@ Helper scripts to quickly build buckets with tidy access rights
 
 ## Getting started
 
-1. Install AWS command line tool.
-    - Mac users can run `brew install awscli` (provided you have brew).
+1. Install [AWS command line tool](https://aws.amazon.com/cli).
+    - Mac users can run `brew install awscli` (provided you have [brew](https://brew.sh/)).
 1. Configure it with `aws configure` and add access token.
     - Note: We do not yet provide top level credentials to create buckets but soon.
 1. Run `./s3-spin-up-a-bucket.sh bucket-name`. This will:
