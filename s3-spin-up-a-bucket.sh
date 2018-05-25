@@ -11,13 +11,14 @@ BUCKETNAME=$1
 
 ./create-aws-user.sh $BUCKETNAME
 
+aws iam create-access-key --user-name $BUCKETNAME
+
 # Create a bucket in Ireland, because Craft2 S3 functionality needs a little
 # older authentication scheme only found in certain AWS data centers.
+aws s3api create-bucket --bucket $BUCKETNAME --region eu-west-1 \
+  --create-bucket-configuration LocationConstraint=eu-west-1
 # Finally we add versioning because it's quite unpleasant to lose important data.
-aws s3api create-bucket --bucket $BUCKETNAME \
-  --region eu-west-1 \
+aws s3api put-bucket-versioning --bucket $BUCKETNAME \
   --versioning-configuration Status=Enabled
 
 ./give-user-access-to-bucket.sh $BUCKETNAME
-
-aws iam create-access-key --user-name $BUCKETNAME
