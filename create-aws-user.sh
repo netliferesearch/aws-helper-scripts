@@ -1,6 +1,6 @@
 #!/bin/bash
 
-$USERNAME=$1
+USERNAME=$1
 
 aws iam create-user --user-name $USERNAME
 
