@@ -9,9 +9,7 @@
 # 5. Finally we need to create an access token for the user.
 BUCKETNAME=$1
 
-./create-aws-user.sh $BUCKETNAME
-
-aws iam create-access-key --user-name $BUCKETNAME
+./create-aws-user-and-key.sh $BUCKETNAME
 
 # Create a bucket in Ireland, because Craft2 S3 functionality needs a little
 # older authentication scheme only found in certain AWS data centers.
